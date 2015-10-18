@@ -65,7 +65,7 @@ g <- g +
 plot(g)
 #dev.off()
 ```
-**3. Calculating and reporting the mean and median of the total number of steps taken per day **
+**3. Calculating and reporting the mean and median of the total number of steps taken per day**  
 Mean
 ```{r mean, echo = TRUE}
 Mean <- mean(SumStepsDay$steps)
