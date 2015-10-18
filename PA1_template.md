@@ -51,7 +51,7 @@ library(lattice)
 
 ## Loading and preprocessing the data
 
-### Set the environment
+### Set the environment  
 
 ```r
 current <- getwd()
@@ -63,18 +63,18 @@ Geting the data from Source
 filename <- "repdata-data-activity.zip"
 
 if (!file.exists(filename)){
-  fileURL <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
-  download.file(fileURL, filename, method="libcurl")
+        fileURL <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
+        download.file(fileURL, filename, method="libcurl")
 }  
 if (!file.exists("activity.csv")) { 
-  unzip(filename) 
+        unzip(filename) 
 }
 ```
 Reading input file as suggested 
 
 ```r
 if(!exists("Inputdata")){
-  Inputdata <- read.csv("activity.csv", header = TRUE, sep = ",", colClasses=c("numeric", "character", "numeric"))
+        Inputdata <- read.csv("activity.csv", header = TRUE, sep = ",", colClasses=c("numeric", "character", "numeric"))
 }
 ```
 
@@ -84,7 +84,7 @@ if(!exists("Inputdata")){
 
 ```r
 if(!exists("Inputdata")){
-  Inputdata <- read.csv("activity.csv", header = TRUE, sep = ",", colClasses=c("numeric", "character", "numeric"))
+        Inputdata <- read.csv("activity.csv", header = TRUE, sep = ",", colClasses=c("numeric", "character", "numeric"))
 }
 
 SumStepsDay <- aggregate(steps ~ date, Inputdata, sum)
@@ -276,6 +276,6 @@ head(TidyInputdata)
 ```
 
 
-**Making a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).**
+**2. Making a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).**
 
 ![](PA1_template_files/figure-html/panelplot -1.png) 
