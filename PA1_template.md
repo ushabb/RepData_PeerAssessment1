@@ -109,7 +109,7 @@ print(ResultSet1)
 ```
 
 ![](PA1_template_files/figure-html/hist -1.png) 
-**3. Calculating and reporting the mean and median of the total number of steps taken per day **
+**3. Calculating and reporting the mean and median of the total number of steps taken per day**  
 Mean
 
 ```r
